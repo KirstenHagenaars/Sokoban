@@ -25,100 +25,99 @@ public class Level extends AppCompatActivity{
     }
 
     //Need to take care of index out of bounds for map!
-    public void SwapPictures(int x, int y, int x2, int y2)
+    public void SwapPictures(int x, int y, int x2, int y2, LinearLayout layout)
     {
-        //Log.d("test", String.valueOf(findViewById(R.id.level1)==null));
-        LinearLayout layout = findViewById(R.id.level1);
-
-        //Log.d("What The Fuck", String.valueOf(y<5 && y>0));
-        //LinearLayout row = (LinearLayout) layout.getChildAt(y);
-        //ImageView img = (ImageView) row.getChildAt(x);
-        //int ID1 = img.getId();
-        /*Drawable draw1 = img.getDrawable();
-
+        LinearLayout row = (LinearLayout) layout.getChildAt(y);
+        ImageView img = (ImageView) row.getChildAt(x);
+        Drawable draw1 = img.getDrawable();
+        //Log.d("coordinates", x+"\t"+y+"\t"+x2+"\t"+y2+"end");
         LinearLayout row2 = (LinearLayout) layout.getChildAt(y2);
         ImageView img2 = (ImageView) row2.getChildAt(x2);
-        //int ID2 = row2.getChildAt(x2).getId();
         Drawable draw2 = img2.getDrawable();
-        //int help = ID1;
-
-        Drawable temp = img.getDrawable();
         img.setImageDrawable(draw2);
-        img2.setImageDrawable(draw1);*/
+        img2.setImageDrawable(draw1);
     }
 
-    public void GoRight()
+    public void GoRight(LinearLayout layout)
     {
         //Move if there is nothing
         if (map[player.GetY()][player.GetX()+1] == objects.EMPTY)
         {
+            SwapPictures(player.GetX(),player.GetY(),player.GetX()+1,player.GetY(), layout);
             player.GoRight();
-            SwapPictures(player.GetY(),player.GetX(),player.GetY(),player.GetX()+1);
         }
 
 
         //Move if there is a box, and if it is empty behind the box, also move the box
         if (map[player.GetY()][player.GetX()+1] == objects.BOX && map[player.GetY()][player.GetX()+2] == objects.EMPTY)
         {
-            player.GoRight();
+            SwapPictures(player.GetX()+1, player.GetY(), player.GetX()+2, player.GetY(), layout);
+            SwapPictures(player.GetX(), player.GetY(), player.GetX()+1, player.GetY(), layout);
             map[player.GetY()][player.GetX()+1] = objects.EMPTY;
             map[player.GetY()][player.GetX()+2] = objects.BOX;
+            player.GoRight();
         }
     }
 
-    public void GoLeft()
+    public void GoLeft(LinearLayout layout)
     {
         //Move if there is nothing
         if (map[player.GetY()][player.GetX()-1] == objects.EMPTY)
         {
+            SwapPictures(player.GetX(),player.GetY(),player.GetX()-1,player.GetY(), layout);
             player.GoLeft();
-            SwapPictures(player.GetY(),player.GetX(),player.GetY(),player.GetX()-1);
         }
 
 
         //Move if there is a box, and if it is empty behind the box, also move the box
         if (map[player.GetY()][player.GetX()-1] == objects.BOX && map[player.GetY()][player.GetX()-2] == objects.EMPTY)
         {
-            player.GoLeft();
+            SwapPictures(player.GetX()-1, player.GetY(), player.GetX()-2, player.GetY(), layout);
+            SwapPictures(player.GetX(), player.GetY(), player.GetX()-1, player.GetY(), layout);
             map[player.GetY()][player.GetX()-1] = objects.EMPTY;
             map[player.GetY()][player.GetX()-2] = objects.BOX;
+            player.GoLeft();
         }
     }
 
-    public void GoUp()
+    public void GoUp(LinearLayout layout)
     {
         //Move if there is nothing
-        if (map[player.GetY()-1][player.GetX()] == objects.EMPTY)
+        if (map[(player.GetY())-1][player.GetX()] == objects.EMPTY)
         {
+            SwapPictures(player.GetX(),player.GetY(),player.GetX(),player.GetY()-1, layout);
             player.GoUp();
-            SwapPictures(player.GetY(),player.GetX(),player.GetY()-1,player.GetX());
         }
 
 
         //Move if there is a box, and if it is empty behind the box, also move the box
         if (map[player.GetY()-1][player.GetX()] == objects.BOX && map[player.GetY()-2][player.GetX()] == objects.EMPTY)
         {
-            player.GoUp();
+            SwapPictures(player.GetX(), player.GetY()-1, player.GetX(), player.GetY()-2, layout);
+            SwapPictures(player.GetX(), player.GetY(), player.GetX(), player.GetY()-1, layout);
             map[player.GetY()-1][player.GetX()] = objects.EMPTY;
             map[player.GetY()-2][player.GetX()] = objects.BOX;
+            player.GoUp();
         }
     }
-    public void GoDown()
+    public void GoDown(LinearLayout layout)
     {
         //Move if there is nothing
         if (map[player.GetY()+1][player.GetX()] == objects.EMPTY)
         {
+            SwapPictures(player.GetX(),player.GetY(),player.GetX(),player.GetY()+1, layout);
             player.GoDown();
-            SwapPictures(player.GetY(),player.GetX(),player.GetY()+1,player.GetX());
         }
 
 
         //Move if there is a box, and if it is empty behind the box, also move the box
         if (map[player.GetY()+1][player.GetX()] == objects.BOX && map[player.GetY()+2][player.GetX()] == objects.EMPTY)
         {
-            player.GoDown();
+            SwapPictures(player.GetX(), player.GetY()+1, player.GetX(), player.GetY()+2, layout);
+            SwapPictures(player.GetX(), player.GetY(), player.GetX(), player.GetY()+1, layout);
             map[player.GetY()+1][player.GetX()] = objects.EMPTY;
             map[player.GetY()+2][player.GetX()] = objects.BOX;
+            player.GoDown();
         }
     }
 
@@ -130,5 +129,16 @@ public class Level extends AppCompatActivity{
                 return false;
         }
         return true;
+    }
+
+    public boolean isCross(Coordinates coordinates)
+    {
+        boolean iscross = false;
+        for (int i = 0; i < cross.length; i++)
+        {
+            if(coordinates.GetX()==cross[i].GetX() && coordinates.GetY()== cross[i].GetY())
+                iscross = true;
+        }
+        return iscross;
     }
 }

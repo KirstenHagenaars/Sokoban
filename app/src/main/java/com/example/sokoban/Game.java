@@ -32,25 +32,29 @@ public class Game extends AppCompatActivity {
         right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                level.GoRight();
+                LinearLayout layout = findViewById(R.id.level1);
+                level.GoRight(layout);
             }
         });
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                level.GoLeft();
+                LinearLayout layout = findViewById(R.id.level1);
+                level.GoLeft(layout);
             }
         });
         up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                level.GoUp();
+                LinearLayout layout = findViewById(R.id.level1);
+                level.GoUp(layout);
             }
         });
         down.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                level.GoDown();
+                LinearLayout layout = findViewById(R.id.level1);
+                level.GoDown(layout);
             }
         });
     }
