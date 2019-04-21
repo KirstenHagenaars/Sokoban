@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //open level2
+                Log.d("test", String.valueOf(findViewById(R.id.level2)==null));
                 startActivity(new Intent(MainActivity.this, GameTwo.class));
             }
         });
