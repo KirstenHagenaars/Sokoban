@@ -295,9 +295,32 @@
             android:layout_height="80dp"
             android:layout_marginTop="0dp"
             android:background="@mipmap/restartbutton" />
-
-
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:id="@+id/box"
+        android:src="@mipmap/box"
+        android:visibility="gone"/>
+    <ImageView
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:id="@+id/figure"
+        android:src="@mipmap/figure"
+        android:visibility="gone"/>
+    <ImageView
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:id="@+id/floor"
+        android:src="@mipmap/floor"
+        android:visibility="gone"/>
+    <ImageView
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:id="@+id/cross"
+        android:src="@mipmap/crossfloor"
+        android:visibility="gone"/>
 
 
 </LinearLayout>

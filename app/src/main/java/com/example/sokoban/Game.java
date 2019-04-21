@@ -18,7 +18,7 @@ public class Game extends AppCompatActivity {
         objects map[][] = {{objects.WALL, objects.WALL,objects.WALL,objects.WALL,objects.WALL},
                             {objects.WALL, objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.WALL},
                             {objects.WALL,objects.EMPTY, objects.BOX, objects.EMPTY,objects.WALL},
-                            {objects.WALL,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.WALL},
+                            {objects.WALL,objects.EMPTY,objects.CROSS,objects.EMPTY,objects.WALL},
                             {objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL}};
         int size = 5;
         Coordinates cross [] = {new Coordinates(2,3)};

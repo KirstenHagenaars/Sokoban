@@ -1,12 +1,14 @@
 package com.example.sokoban;
 
 import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.util.Log;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.support.v7.app.AppCompatActivity;
-enum objects {BOX, WALL, EMPTY}
+import android.view.MotionEvent;
+enum objects {BOX, WALL, EMPTY, CROSS}
 
 public class Level extends AppCompatActivity{
 
@@ -38,6 +40,45 @@ public class Level extends AppCompatActivity{
         img2.setImageDrawable(draw1);
     }
 
+    public void setBox(int x, int y, LinearLayout layout)
+    {
+        LinearLayout row = (LinearLayout) layout.getChildAt(y);
+        row.removeViewAt(x);
+        ImageView box = new ImageView(this);
+        ImageView b = layout.findViewById(R.id.box);
+        box.setImageDrawable(b.getDrawable());
+        row.addView(box,x);
+    }
+    public void setFigure(int x, int y, LinearLayout layout)
+    {
+        LinearLayout row = (LinearLayout) layout.getChildAt(y);
+        row.removeViewAt(x);
+        ImageView fig = new ImageView(this);
+        ImageView f = layout.findViewById(R.id.figure);
+        fig.setImageDrawable(f.getDrawable());
+        row.addView(fig,x);
+    }
+    public void setFloor(int x, int y, LinearLayout layout)
+    {
+        LinearLayout row = (LinearLayout) layout.getChildAt(y);
+        row.removeViewAt(x);
+        ImageView fl = new ImageView(this);
+        ImageView f = layout.findViewById(R.id.floor);
+        fl.setImageDrawable(f.getDrawable());
+        row.addView(fl,x);
+
+    }
+    public void setCross(int x, int y, LinearLayout layout)
+    {
+        LinearLayout row = (LinearLayout) layout.getChildAt(y);
+        row.removeViewAt(x);
+        ImageView cr = new ImageView(this);
+        ImageView c = layout.findViewById(R.id.cross);
+        cr.setImageDrawable(c.getDrawable());
+        row.addView(cr, x);
+
+    }
+
     public void GoRight(LinearLayout layout)
     {
         //Move if there is nothing
@@ -46,7 +87,12 @@ public class Level extends AppCompatActivity{
             SwapPictures(player.GetX(),player.GetY(),player.GetX()+1,player.GetY(), layout);
             player.GoRight();
         }
-
+        if (map[(player.GetY())][player.GetX()+1] == objects.CROSS)
+        {
+            SwapPictures(player.GetX(),player.GetY(),player.GetX()+1,player.GetY(), layout);
+            setFloor(player.GetX(), player.GetY(), layout);
+            player.GoRight();
+        }
 
         //Move if there is a box, and if it is empty behind the box, also move the box
         if (map[player.GetY()][player.GetX()+1] == objects.BOX && map[player.GetY()][player.GetX()+2] == objects.EMPTY)
@@ -55,6 +101,13 @@ public class Level extends AppCompatActivity{
             SwapPictures(player.GetX(), player.GetY(), player.GetX()+1, player.GetY(), layout);
             map[player.GetY()][player.GetX()+1] = objects.EMPTY;
             map[player.GetY()][player.GetX()+2] = objects.BOX;
+            player.GoRight();
+        }
+        if (map[player.GetY()][player.GetX()+1] == objects.BOX && map[player.GetY()][player.GetX()+2] == objects.CROSS)
+        {
+            SwapPictures(player.GetX()+1, player.GetY(), player.GetX()+2, player.GetY(), layout);
+            SwapPictures(player.GetX(), player.GetY(), player.GetX()+1, player.GetY(), layout);
+            setFloor(player.GetX(), player.GetY(), layout);
             player.GoRight();
         }
     }
@@ -67,7 +120,12 @@ public class Level extends AppCompatActivity{
             SwapPictures(player.GetX(),player.GetY(),player.GetX()-1,player.GetY(), layout);
             player.GoLeft();
         }
-
+        if (map[(player.GetY())][player.GetX()-1] == objects.CROSS)
+        {
+            SwapPictures(player.GetX(),player.GetY(),player.GetX()-1,player.GetY(), layout);
+            setFloor(player.GetX(), player.GetY(), layout);
+            player.GoLeft();
+        }
 
         //Move if there is a box, and if it is empty behind the box, also move the box
         if (map[player.GetY()][player.GetX()-1] == objects.BOX && map[player.GetY()][player.GetX()-2] == objects.EMPTY)
@@ -76,6 +134,13 @@ public class Level extends AppCompatActivity{
             SwapPictures(player.GetX(), player.GetY(), player.GetX()-1, player.GetY(), layout);
             map[player.GetY()][player.GetX()-1] = objects.EMPTY;
             map[player.GetY()][player.GetX()-2] = objects.BOX;
+            player.GoLeft();
+        }
+        if (map[player.GetY()][player.GetX()-1] == objects.BOX && map[player.GetY()][player.GetX()-2] == objects.CROSS)
+        {
+            SwapPictures(player.GetX()-1, player.GetY(), player.GetX()-2, player.GetY(), layout);
+            SwapPictures(player.GetX(), player.GetY(), player.GetX()-1, player.GetY(), layout);
+            setFloor(player.GetX(), player.GetY(), layout);
             player.GoLeft();
         }
     }
@@ -88,7 +153,12 @@ public class Level extends AppCompatActivity{
             SwapPictures(player.GetX(),player.GetY(),player.GetX(),player.GetY()-1, layout);
             player.GoUp();
         }
-
+        if (map[(player.GetY())-1][player.GetX()] == objects.CROSS)
+        {
+            SwapPictures(player.GetX(),player.GetY(),player.GetX(),player.GetY()-1, layout);
+            setFloor(player.GetX(), player.GetY(), layout);
+            player.GoUp();
+        }
 
         //Move if there is a box, and if it is empty behind the box, also move the box
         if (map[player.GetY()-1][player.GetX()] == objects.BOX && map[player.GetY()-2][player.GetX()] == objects.EMPTY)
@@ -97,6 +167,13 @@ public class Level extends AppCompatActivity{
             SwapPictures(player.GetX(), player.GetY(), player.GetX(), player.GetY()-1, layout);
             map[player.GetY()-1][player.GetX()] = objects.EMPTY;
             map[player.GetY()-2][player.GetX()] = objects.BOX;
+            player.GoUp();
+        }
+        if (map[player.GetY()-1][player.GetX()] == objects.BOX && map[player.GetY()-2][player.GetX()] == objects.CROSS)
+        {
+            SwapPictures(player.GetX(), player.GetY()-1, player.GetX(), player.GetY()-2, layout);
+            SwapPictures(player.GetX(), player.GetY(), player.GetX(), player.GetY()-1, layout);
+            setFloor(player.GetX(), player.GetY(), layout);
             player.GoUp();
         }
     }
@@ -108,7 +185,12 @@ public class Level extends AppCompatActivity{
             SwapPictures(player.GetX(),player.GetY(),player.GetX(),player.GetY()+1, layout);
             player.GoDown();
         }
-
+        if (map[(player.GetY())+1][player.GetX()] == objects.CROSS)
+        {
+            SwapPictures(player.GetX(),player.GetY(),player.GetX(),player.GetY()+1, layout);
+            setFloor(player.GetX(), player.GetY(), layout);
+            player.GoDown();
+        }
 
         //Move if there is a box, and if it is empty behind the box, also move the box
         if (map[player.GetY()+1][player.GetX()] == objects.BOX && map[player.GetY()+2][player.GetX()] == objects.EMPTY)
@@ -117,6 +199,13 @@ public class Level extends AppCompatActivity{
             SwapPictures(player.GetX(), player.GetY(), player.GetX(), player.GetY()+1, layout);
             map[player.GetY()+1][player.GetX()] = objects.EMPTY;
             map[player.GetY()+2][player.GetX()] = objects.BOX;
+            player.GoDown();
+        }
+        if (map[player.GetY()+1][player.GetX()] == objects.BOX && map[player.GetY()+2][player.GetX()] == objects.CROSS)
+        {
+            SwapPictures(player.GetX(), player.GetY()+1, player.GetX(), player.GetY()+2, layout);
+            SwapPictures(player.GetX(), player.GetY(), player.GetX(), player.GetY()+1, layout);
+            setFloor(player.GetX(), player.GetY(), layout);
             player.GoDown();
         }
     }
