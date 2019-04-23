@@ -5,41 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="9"
+    android:weightSum="12"
     android:background="@mipmap/background"
-    tools:context=".GameTwo">
+    tools:context=".GameThree"
+    android:id="@+id/game3">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -81,6 +54,58 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -93,12 +118,574 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/crossfloor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/crossfloor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
 
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/box"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/box"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/crossfloor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/crossfloor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
@@ -125,6 +712,33 @@
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:src="@mipmap/floor"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
@@ -138,6 +752,7 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -146,6 +761,7 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -154,14 +770,7 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -174,6 +783,59 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/box"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/box"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
 
         <ImageView
             android:layout_width="0px"
@@ -206,7 +868,7 @@
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@mipmap/floor"
+            android:src="@mipmap/block"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
@@ -219,30 +881,7 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -255,6 +894,41 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/water"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/water"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
 
         <ImageView
             android:layout_width="0px"
@@ -296,10 +970,11 @@
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@mipmap/block"
+            android:src="@mipmap/floor"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -308,6 +983,7 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -316,14 +992,7 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/crossfloor"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -336,25 +1005,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -369,150 +1019,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@mipmap/floor"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/crossfloor"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/floor"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/floor"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/floor"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/floor"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/floor"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
@@ -543,6 +1049,34 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/box"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -551,22 +1085,25 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@mipmap/floor"
+            android:src="@mipmap/block"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@mipmap/floor"
+            android:src="@mipmap/block"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -579,7 +1116,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -624,6 +1160,25 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/floor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -632,6 +1187,7 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -640,6 +1196,7 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -648,6 +1205,16 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -657,9 +1224,54 @@
             android:adjustViewBounds="true"
             />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/block"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            />
 
         <ImageView
             android:layout_width="0px"
@@ -705,6 +1317,7 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -713,6 +1326,7 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
+
         <ImageView
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -721,22 +1335,8 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
-        <ImageView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/block"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            />
+
+
     </LinearLayout>
     <LinearLayout
 
@@ -793,12 +1393,16 @@
         android:gravity="right|bottom">
 
         <Button
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginTop="0dp"
+            android:id="@+id/won"
+            android:text="I think I won"/>
+        <Button
             android:id="@+id/restartButton"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginTop="0dp"
             android:background="@mipmap/restartbutton" />
-
-
     </LinearLayout>
 </LinearLayout>

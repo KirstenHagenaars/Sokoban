@@ -1,5 +1,7 @@
 package com.example.sokoban;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,10 +11,11 @@ import android.widget.Button;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class Game extends AppCompatActivity {
 
-    private Button right, left, up, down, restart;
+    private Button right, left, up, down, restart, won;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,8 @@ public class Game extends AppCompatActivity {
         up = (Button) findViewById(R.id.up);
         down = (Button) findViewById(R.id.down);
         restart = (Button) findViewById(R.id.restartButton);
+        won = (Button) findViewById(R.id.won);
+
 
         right.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,11 +75,40 @@ public class Game extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //if level is solved, doesnt work yet
-        if (level.solved())
-        {
-            startActivity(new Intent(Game.this, MainActivity.class));
-        }
+        won.setOnClickListener(new View.OnClickListener() {
+            Dialog answer = new Dialog(Game.this);
+            @Override
+            public void onClick(View v) {
+                Button back;
+                if(level.solved())
+                {
+                    Log.d("true won", "won");
+                    answer.setContentView(R.layout.winpopup);
+                    answer.show();
+                    back = (Button) answer.findViewById(R.id.backmain);
+                    back.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            answer.dismiss();
+                            finish();
+                        }
+                    });
+                }
+                else
+                {
+                    Log.d("false won", "won");
+                    answer.setContentView(R.layout.notwinpopup);
+                    answer.show();
+                    back = (Button) answer.findViewById(R.id.backlevel);
+                    back.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            answer.dismiss();
+                        }
+                    });
+                }
+            }
+        });
 
     }
 }

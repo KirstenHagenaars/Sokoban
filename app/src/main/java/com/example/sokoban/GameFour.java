@@ -2,20 +2,20 @@ package com.example.sokoban;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-public class GameThree extends AppCompatActivity {
+public class GameFour extends AppCompatActivity {
     private Button right, left, up, down, restart, won;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_three);
+        setContentView(R.layout.activity_game_four);
         objects map[][] = {{objects.WALL, objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL},
                 {objects.WALL, objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.WALL},
                 {objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.EMPTY,objects.EMPTY, objects.BOX, objects.BOX, objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL},
@@ -23,8 +23,8 @@ public class GameThree extends AppCompatActivity {
                 {objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL,objects.WALL},
                 {objects.WALL,objects.WALL,objects.EMPTY,objects.WALL,objects.WALL,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL},
                 {objects.WALL,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.WALL,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL,objects.WALL},
-                {objects.WALL,objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL},
-                {objects.WALL,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.WALL,objects.EMPTY,objects.BOX,objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL},
+                {objects.WALL,objects.BOX,objects.BOX,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL},
+                {objects.WALL,objects.WATER,objects.WATER,objects.EMPTY,objects.WALL,objects.EMPTY,objects.BOX,objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL},
                 {objects.WALL,objects.EMPTY,objects.EMPTY,objects.BOX,objects.EMPTY,objects.BOX,objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL,objects.WALL},
                 {objects.WALL,objects.WALL,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL},
                 {objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL}};
@@ -80,7 +80,7 @@ public class GameThree extends AppCompatActivity {
             }
         });
         won.setOnClickListener(new View.OnClickListener() {
-            Dialog answer = new Dialog(GameThree.this);
+            Dialog answer = new Dialog(GameFour.this);
             @Override
             public void onClick(View v) {
                 Button back;

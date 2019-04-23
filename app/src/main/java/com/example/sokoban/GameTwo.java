@@ -1,5 +1,6 @@
 package com.example.sokoban;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class GameTwo extends AppCompatActivity {
-    private Button right, left, up, down, restart;
+    private Button right, left, up, down, restart, won;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,11 +21,11 @@ public class GameTwo extends AppCompatActivity {
                 {objects.WALL,objects.EMPTY,objects.BOX,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL,objects.EMPTY,objects.WALL},
                 {objects.WALL,objects.WALL,objects.WALL,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL,objects.EMPTY,objects.WALL},
                 {objects.WALL,objects.WALL,objects.WALL,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.WALL},
-                {objects.WALL,objects.WALL,objects.BOX,objects.EMPTY,objects.EMPTY,objects.WALL,objects.EMPTY,objects.EMPTY,objects.WALL},
+                {objects.WALL,objects.WALL,objects.EMPTY,objects.BOX,objects.EMPTY,objects.WALL,objects.EMPTY,objects.EMPTY,objects.WALL},
                 {objects.WALL,objects.WALL,objects.EMPTY,objects.EMPTY,objects.EMPTY,objects.WALL,objects.WALL,objects.WALL,objects.WALL},
                 {objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL,objects.WALL}};
         int size = 9;
-        Coordinates cross [] = {new Coordinates(7,3),new Coordinates(7,4)};
+        Coordinates cross [] = {new Coordinates(3, 1),new Coordinates(7,3)};
         Coordinates player = new Coordinates(1,1);
         final Level level = new Level(map, size, cross, player);
         right = (Button) findViewById(R.id.right);
@@ -32,32 +33,33 @@ public class GameTwo extends AppCompatActivity {
         up = (Button) findViewById(R.id.up);
         down = (Button) findViewById(R.id.down);
         restart = (Button) findViewById(R.id.restartButton);
+        won = (Button) findViewById(R.id.won);
 
         right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LinearLayout layout = findViewById(R.id.level2);
+                LinearLayout layout = findViewById(R.id.game2);
                 level.GoRight(layout);
             }
         });
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LinearLayout layout = findViewById(R.id.level2);
+                LinearLayout layout = findViewById(R.id.game2);
                 level.GoLeft(layout);
             }
         });
         up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LinearLayout layout = findViewById(R.id.level2);
+                LinearLayout layout = findViewById(R.id.game2);
                 level.GoUp(layout);
             }
         });
         down.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LinearLayout layout = findViewById(R.id.level2);
+                LinearLayout layout = findViewById(R.id.game2);
                 level.GoDown(layout);
             }
         });
@@ -65,10 +67,44 @@ public class GameTwo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //open level 1
-                Log.d("test", String.valueOf(findViewById(R.id.level2)==null));
+                Log.d("test", String.valueOf(findViewById(R.id.game2)==null));
                 Intent intent = getIntent();
                 finish();
                 startActivity(intent);
+            }
+        });
+        won.setOnClickListener(new View.OnClickListener() {
+            Dialog answer = new Dialog(GameTwo.this);
+            @Override
+            public void onClick(View v) {
+                Button back;
+                if(level.solved())
+                {
+                    Log.d("true won", "won");
+                    answer.setContentView(R.layout.winpopup);
+                    answer.show();
+                    back = (Button) answer.findViewById(R.id.backmain);
+                    back.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            answer.dismiss();
+                            finish();
+                        }
+                    });
+                }
+                else
+                {
+                    Log.d("false won", "won");
+                    answer.setContentView(R.layout.notwinpopup);
+                    answer.show();
+                    back = (Button) answer.findViewById(R.id.backlevel);
+                    back.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            answer.dismiss();
+                        }
+                    });
+                }
             }
         });
     }

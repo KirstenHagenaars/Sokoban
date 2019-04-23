@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
-enum objects {BOX, WALL, EMPTY}
+enum objects {BOX, WALL, EMPTY, WATER}
 
 public class Level extends AppCompatActivity{
 
@@ -80,6 +80,15 @@ public class Level extends AppCompatActivity{
             map[player.GetY()][player.GetX()+2] = objects.BOX;
             player.GoRight();
         }
+        else if (map[player.GetY()][player.GetX()+1] == objects.BOX && map[player.GetY()][player.GetX()+2] == objects.WATER)
+        {
+            setFloor(player.GetX(), player.GetY(), layout);
+            setPlayer(player.GetX()+1, player.GetY(), layout);
+            setFloor(player.GetX()+2, player.GetY(), layout);
+            map[player.GetY()][player.GetX()+1] = objects.EMPTY;
+            map[player.GetY()][player.GetX()+2] = objects.EMPTY;
+            player.GoRight();
+        }
     }
 
     public void GoLeft(LinearLayout layout)
@@ -100,6 +109,15 @@ public class Level extends AppCompatActivity{
             setBox(player.GetX()-2, player.GetY(), layout);
             map[player.GetY()][player.GetX()-1] = objects.EMPTY;
             map[player.GetY()][player.GetX()-2] = objects.BOX;
+            player.GoLeft();
+        }
+        else if (map[player.GetY()][player.GetX()-1] == objects.BOX && map[player.GetY()][player.GetX()-2] == objects.WATER)
+        {
+            setFloor(player.GetX(), player.GetY(), layout);
+            setPlayer(player.GetX()-1, player.GetY(), layout);
+            setFloor(player.GetX()-2, player.GetY(), layout);
+            map[player.GetY()][player.GetX()-1] = objects.EMPTY;
+            map[player.GetY()][player.GetX()-2] = objects.EMPTY;
             player.GoLeft();
         }
     }
@@ -124,6 +142,16 @@ public class Level extends AppCompatActivity{
             map[player.GetY()-2][player.GetX()] = objects.BOX;
             player.GoUp();
         }
+        //Move if there is a box and behind the box there is water and turn water into floor
+        else if (map[player.GetY()-1][player.GetX()] == objects.BOX && map[player.GetY()-2][player.GetX()] == objects.WATER)
+        {
+            setFloor(player.GetX(), player.GetY(), layout);
+            setPlayer(player.GetX(), player.GetY()-1, layout);
+            setFloor(player.GetX(), player.GetY()-2, layout);
+            map[player.GetY()-1][player.GetX()] = objects.EMPTY;
+            map[player.GetY()-2][player.GetX()] = objects.EMPTY;
+            player.GoUp();
+        }
     }
     public void GoDown(LinearLayout layout)
     {
@@ -145,13 +173,23 @@ public class Level extends AppCompatActivity{
             map[player.GetY()+2][player.GetX()] = objects.BOX;
             player.GoDown();
         }
+        //Move if there is a box and behind the box there is water and turn water into floor
+        else if(map[player.GetY()+1][player.GetX()] == objects.BOX && map[player.GetY()+2][player.GetX()] == objects.WATER)
+        {
+            setFloor(player.GetX(), player.GetY(), layout);
+            setPlayer(player.GetX(), player.GetY()+1, layout);
+            setFloor(player.GetX(), player.GetY()+2, layout);
+            map[player.GetY()+1][player.GetX()] = objects.EMPTY;
+            map[player.GetY()+2][player.GetX()] = objects.EMPTY;
+            player.GoDown();
+        }
     }
 
     public boolean solved()
     {
-        for (int i = 0; i < cross.length; i++)
+        for(Coordinates coord: cross)
         {
-            if (map[cross[i].GetX()][cross[i].GetY()] != objects.BOX)
+            if(map[coord.GetY()][coord.GetX()]!= objects.BOX)
                 return false;
         }
         return true;
