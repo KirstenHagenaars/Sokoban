@@ -34,8 +34,8 @@ public class GameFour extends AppCompatActivity {
         Coordinates cross [] = {new Coordinates(1,1),new Coordinates(10,1), new Coordinates(5,5)
                 ,new Coordinates(8,5), new Coordinates(2,6)};
         Coordinates player = new Coordinates(2,6);
-
-        final Level level = new Level(map, size, cross, player);
+        boolean water = false;
+        final Level level = new Level(map, size, cross, player, water);
         right = (Button) findViewById(R.id.right);
         left = (Button) findViewById(R.id.left);
         up = (Button) findViewById(R.id.up);
@@ -48,6 +48,10 @@ public class GameFour extends AppCompatActivity {
             public void onClick(View v) {
                 LinearLayout layout = findViewById(R.id.game3);
                 level.GoRight(layout);
+                if (level.water) {
+                    ring= MediaPlayer.create(GameFour.this,R.raw.water);
+                    ring.start();
+                }
             }
         });
         left.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +59,10 @@ public class GameFour extends AppCompatActivity {
             public void onClick(View v) {
                 LinearLayout layout = findViewById(R.id.game3);
                 level.GoLeft(layout);
+                if (level.water) {
+                    ring= MediaPlayer.create(GameFour.this,R.raw.water);
+                    ring.start();
+                }
             }
         });
         up.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +70,10 @@ public class GameFour extends AppCompatActivity {
             public void onClick(View v) {
                 LinearLayout layout = findViewById(R.id.game3);
                 level.GoUp(layout);
+                if (level.water) {
+                    ring= MediaPlayer.create(GameFour.this,R.raw.water);
+                    ring.start();
+                }
             }
         });
         down.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +81,10 @@ public class GameFour extends AppCompatActivity {
             public void onClick(View v) {
                 LinearLayout layout = findViewById(R.id.game3);
                 level.GoDown(layout);
+                if (level.water) {
+                    ring= MediaPlayer.create(GameFour.this,R.raw.water);
+                    ring.start();
+                }
             }
         });
         restart.setOnClickListener(new View.OnClickListener() {

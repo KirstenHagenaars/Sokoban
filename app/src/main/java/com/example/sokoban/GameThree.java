@@ -34,8 +34,8 @@ public class GameThree extends AppCompatActivity {
         Coordinates cross [] = {new Coordinates(1,1),new Coordinates(10,1), new Coordinates(5,5)
                 ,new Coordinates(8,5), new Coordinates(2,6)};
         Coordinates player = new Coordinates(2,6);
-
-        final Level level = new Level(map, size, cross, player);
+        boolean water = false;
+        final Level level = new Level(map, size, cross, player, water);
         right = (Button) findViewById(R.id.right);
         left = (Button) findViewById(R.id.left);
         up = (Button) findViewById(R.id.up);

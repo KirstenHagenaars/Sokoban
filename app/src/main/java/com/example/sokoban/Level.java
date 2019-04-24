@@ -20,14 +20,16 @@ public class Level extends AppCompatActivity{
     private int size;               //height/width of the current level
     private Coordinates cross [];   //coordinates of all the crosses in the level
     private Coordinates player;     //coordinates of the player
+    public boolean water;
 
 
-    public Level (objects map[][], int size, Coordinates cross[], Coordinates player)
+    public Level (objects map[][], int size, Coordinates cross[], Coordinates player, boolean water)
     {
         this.map = map;
         this.size = size;
         this.cross = cross;
         this.player = player;
+        this.water = water;
     }
 
     //Need to take care of index out of bounds for map!
@@ -72,6 +74,7 @@ public class Level extends AppCompatActivity{
             setFloor(player.GetX(), player.GetY(), layout);
             setPlayer(player.GetX()+1, player.GetY(), layout);
             player.GoRight();
+            water = false;
         }
 
         //Move if there is a box, and if it is empty behind the box, also move the box
@@ -83,6 +86,7 @@ public class Level extends AppCompatActivity{
             map[player.GetY()][player.GetX()+1] = objects.EMPTY;
             map[player.GetY()][player.GetX()+2] = objects.BOX;
             player.GoRight();
+            water = false;
         }
         else if (map[player.GetY()][player.GetX()+1] == objects.BOX && map[player.GetY()][player.GetX()+2] == objects.WATER)
         {
@@ -92,6 +96,7 @@ public class Level extends AppCompatActivity{
             map[player.GetY()][player.GetX()+1] = objects.EMPTY;
             map[player.GetY()][player.GetX()+2] = objects.EMPTY;
             player.GoRight();
+            water = true;
         }
     }
 
@@ -103,6 +108,7 @@ public class Level extends AppCompatActivity{
             setFloor(player.GetX(), player.GetY(), layout);
             setPlayer(player.GetX()-1, player.GetY(), layout);
             player.GoLeft();
+            water = false;
         }
 
         //Move if there is a box, and if it is empty behind the box, also move the box
@@ -114,6 +120,7 @@ public class Level extends AppCompatActivity{
             map[player.GetY()][player.GetX()-1] = objects.EMPTY;
             map[player.GetY()][player.GetX()-2] = objects.BOX;
             player.GoLeft();
+            water = false;
         }
         else if (map[player.GetY()][player.GetX()-1] == objects.BOX && map[player.GetY()][player.GetX()-2] == objects.WATER)
         {
@@ -123,6 +130,7 @@ public class Level extends AppCompatActivity{
             map[player.GetY()][player.GetX()-1] = objects.EMPTY;
             map[player.GetY()][player.GetX()-2] = objects.EMPTY;
             player.GoLeft();
+            water = true;
         }
     }
 
@@ -134,6 +142,7 @@ public class Level extends AppCompatActivity{
             setFloor(player.GetX(), player.GetY(), layout);
             setPlayer(player.GetX(), player.GetY()-1, layout);
             player.GoUp();
+            water = false;
         }
 
         //Move if there is a box, and if it is empty behind the box, also move the box
@@ -145,6 +154,7 @@ public class Level extends AppCompatActivity{
             map[player.GetY()-1][player.GetX()] = objects.EMPTY;
             map[player.GetY()-2][player.GetX()] = objects.BOX;
             player.GoUp();
+            water = false;
         }
         //Move if there is a box and behind the box there is water and turn water into floor
         else if (map[player.GetY()-1][player.GetX()] == objects.BOX && map[player.GetY()-2][player.GetX()] == objects.WATER)
@@ -155,6 +165,7 @@ public class Level extends AppCompatActivity{
             map[player.GetY()-1][player.GetX()] = objects.EMPTY;
             map[player.GetY()-2][player.GetX()] = objects.EMPTY;
             player.GoUp();
+            water = true;
         }
     }
     public void GoDown(LinearLayout layout)
@@ -165,6 +176,7 @@ public class Level extends AppCompatActivity{
             setFloor(player.GetX(), player.GetY(), layout);
             setPlayer(player.GetX(), player.GetY()+1, layout);
             player.GoDown();
+            water = false;
         }
 
         //Move if there is a box, and if it is empty behind the box, also move the box
@@ -176,6 +188,7 @@ public class Level extends AppCompatActivity{
             map[player.GetY()+1][player.GetX()] = objects.EMPTY;
             map[player.GetY()+2][player.GetX()] = objects.BOX;
             player.GoDown();
+            water = false;
         }
         //Move if there is a box and behind the box there is water and turn water into floor
         else if(map[player.GetY()+1][player.GetX()] == objects.BOX && map[player.GetY()+2][player.GetX()] == objects.WATER)
@@ -186,6 +199,7 @@ public class Level extends AppCompatActivity{
             map[player.GetY()+1][player.GetX()] = objects.EMPTY;
             map[player.GetY()+2][player.GetX()] = objects.EMPTY;
             player.GoDown();
+            water = true;
         }
     }
 

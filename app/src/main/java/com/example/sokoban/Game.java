@@ -31,7 +31,8 @@ public class Game extends AppCompatActivity {
         int size = 5;
         Coordinates cross [] = {new Coordinates(2,3)};
         Coordinates player = new Coordinates(1,2);
-        final Level level = new Level(map, size, cross, player);
+        boolean water = false;
+        final Level level = new Level(map, size, cross, player, water);
         right = (Button) findViewById(R.id.right);
         left = (Button) findViewById(R.id.left);
         up = (Button) findViewById(R.id.up);

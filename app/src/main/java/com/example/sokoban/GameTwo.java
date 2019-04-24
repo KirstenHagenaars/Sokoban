@@ -30,7 +30,8 @@ public class GameTwo extends AppCompatActivity {
         int size = 9;
         Coordinates cross [] = {new Coordinates(3, 1),new Coordinates(7,3)};
         Coordinates player = new Coordinates(1,1);
-        final Level level = new Level(map, size, cross, player);
+        boolean water = false;
+        final Level level = new Level(map, size, cross, player, water);
         right = (Button) findViewById(R.id.right);
         left = (Button) findViewById(R.id.left);
         up = (Button) findViewById(R.id.up);
