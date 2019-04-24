@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/level1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/background"
     android:orientation="vertical"
     android:weightSum="5"
-    android:background="@mipmap/background"
-    tools:context=".Game"
-    android:id="@+id/level1">
+    tools:context=".Game">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -236,72 +236,72 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/restartButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left|start"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/restartbutton" />
+
+        <Button
+            android:id="@+id/won"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="180dp"
+            android:background="@mipmap/win" />
+
+    </LinearLayout>
+
+    <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="0dp"
-        android:layout_marginTop="50dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/up"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"
-            android:background="@mipmap/up" />
+            android:layout_height="66dp"
+            android:background="@mipmap/up"
+            android:scaleType="fitXY" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="58dp"
         android:layout_marginBottom="0dp"
+        android:layout_marginTop="5dp"
         android:baselineAligned="false"
         android:gravity="center">
 
         <Button
             android:id="@+id/left"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"
+            android:layout_height="65dp"
             android:background="@mipmap/left" />
 
         <Button
             android:id="@+id/down"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"
+            android:layout_height="65dp"
             android:background="@mipmap/down" />
 
         <Button
             android:id="@+id/right"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"
+            android:layout_height="65dp"
             android:background="@mipmap/right" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-        android:baselineAligned="false"
-        android:gravity="bottom|right">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_marginTop="0dp"
-            android:id="@+id/won"
-            android:text="I think I won"/>
-
-        <Button
-            android:id="@+id/restartButton"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="0dp"
-            android:background="@mipmap/restartbutton"/>
 
     </LinearLayout>
 
