@@ -10,8 +10,7 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="262dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="209dp"
         android:gravity="center"
         android:padding="5dip"
         android:text="sokoban"
@@ -90,7 +89,8 @@
     <ImageView
         android:id="@+id/startImage"
         android:layout_width="match_parent"
-        android:layout_height="310dp"
+        android:layout_height="199dp"
+        android:layout_marginBottom="16dp"
         android:src="@mipmap/cat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
