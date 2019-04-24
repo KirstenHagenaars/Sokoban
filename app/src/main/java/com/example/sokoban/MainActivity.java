@@ -2,6 +2,7 @@ package com.example.sokoban;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.widget.LinearLayout;
 public class MainActivity extends AppCompatActivity {
 
     private Button level1, level2, level3, level4;
+    static MediaPlayer ring;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +59,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        MediaPlayer ring= MediaPlayer.create(MainActivity.this,R.raw.song);
-        ring.start();
+        ring= MediaPlayer.create(MainActivity.this,R.raw.song);
         ring.setLooping(true);
+        ring.start();
 
         }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        ring.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ring.release();
+    }
+
 }
+

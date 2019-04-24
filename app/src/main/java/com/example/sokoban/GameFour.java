@@ -2,6 +2,7 @@ package com.example.sokoban;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.LinearLayout;
 
 public class GameFour extends AppCompatActivity {
     private Button right, left, up, down, restart, won;
+    static MediaPlayer ring;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +88,8 @@ public class GameFour extends AppCompatActivity {
                 Button back;
                 if(level.solved())
                 {
+                    ring= MediaPlayer.create(GameFour.this,R.raw.winning);
+                    ring.start();
                     //Log.d("true won", "won");
                     answer.setContentView(R.layout.winpopup);
                     answer.show();
@@ -100,6 +104,8 @@ public class GameFour extends AppCompatActivity {
                 }
                 else
                 {
+                    ring= MediaPlayer.create(GameFour.this,R.raw.lose);
+                    ring.start();
                     //Log.d("false won", "won");
                     answer.setContentView(R.layout.notwinpopup);
                     answer.show();

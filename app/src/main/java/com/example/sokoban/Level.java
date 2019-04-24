@@ -1,7 +1,11 @@
 package com.example.sokoban;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.media.AudioManager;
 import android.media.Image;
+import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.util.Log;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
