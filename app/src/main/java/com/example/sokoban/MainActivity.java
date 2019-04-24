@@ -1,6 +1,7 @@
 package com.example.sokoban;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -55,5 +56,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, GameFour.class));
             }
         });
-    }
+
+        MediaPlayer ring= MediaPlayer.create(MainActivity.this,R.raw.song);
+        ring.start();
+        ring.setLooping(true);
+
+        }
 }
